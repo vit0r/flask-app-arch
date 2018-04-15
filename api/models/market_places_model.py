@@ -1,0 +1,2 @@
+class MarketPlacesModel():
+    pass

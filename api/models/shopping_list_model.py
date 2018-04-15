@@ -1,0 +1,2 @@
+class ShoopingListModel():
+    pass

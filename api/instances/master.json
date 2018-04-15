@@ -1,0 +1,4 @@
+{
+  "SECRET_KEY": "mOxsxbXsj5Zm",
+  "SQLALCHEMY_DATABASE_URI": "sqlite:////:databases/master.db"
+}
