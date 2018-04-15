@@ -1,7 +1,12 @@
 """
-cop-op marketing swagger route
+cop-op marketing base route
 """
 
 from flask import Blueprint
 
-swagger_bp = Blueprint(name='swagger', import_name=__name__, url_prefix='/api')
+base_bp = Blueprint(name='base_bp', import_name=__name__)
+
+
+@base_bp.route('/', methods=['GET'])
+def home():
+    return '<b>Works</b>'
