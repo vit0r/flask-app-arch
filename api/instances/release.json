@@ -1,4 +1,0 @@
-{
-  "SECRET_KEY": "rOxsxbXsj5Zm",
-  "SQLALCHEMY_DATABASE_URI": "sqlite:////:databases/release.db"
-}
