@@ -4,10 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask-restplus = "*"
 gunicorn = "*"
 flask-sqlalchemy = "*"
 flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
+flask-api = "*"
 
 [dev-packages]
 

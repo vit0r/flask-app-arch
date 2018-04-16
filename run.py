@@ -2,7 +2,7 @@
 cop-op marketing
 """
 
-from api import app
+from app import app
 
 __author__ = 'Vitor Nascimento de Araujo'
 
