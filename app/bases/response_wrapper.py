@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from functools import wraps
+from flask import request
 from flask_api import status
 
 
@@ -10,17 +11,19 @@ class ResponseWrapper(object):
     def resp(cls, func=None):
         @wraps(func)
         def wrapper(*args, **kw):
-            response = func(*args, **kw)
-            if not response:
+            resp = func(*args, **kw)
+            if request.method == 'POST':
+                return cls.__created()
+            if not resp:
                 return cls.__no_content()
-            if response:
-                return cls.__ok(response)
+            if resp:
+                return cls.__ok(resp)
 
         return wrapper
 
     @classmethod
-    def __ok(cls, response):
-        return response, status.HTTP_200_OK
+    def __ok(cls, resp):
+        return {'data': resp}, status.HTTP_200_OK
 
     @classmethod
     def __no_content(cls):
@@ -29,7 +32,3 @@ class ResponseWrapper(object):
     @classmethod
     def __created(cls):
         return '', status.HTTP_201_CREATED
-
-    @classmethod
-    def __message(cls, message):
-        return message, 422

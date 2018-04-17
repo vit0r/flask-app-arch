@@ -11,4 +11,4 @@ class UserModule(UserSchema):
         return users
 
     def create(self, user):
-        return super().create(user)
+        super().create(user)

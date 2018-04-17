@@ -1,5 +1,6 @@
 from marshmallow import post_load
 from app.bases import base_schema
+from app.bases.orm import ORM
 from app.models.user_model import UserModel
 
 
@@ -8,15 +9,19 @@ class UserSchema(base_schema.ModelSchema):
         model = UserModel
 
     @post_load
-    def parse(self, user):
+    def __parse(self, user):
         return UserModel(**user)
 
-    def find(self,user):
-        user = UserModel.query(self.__user)
+    def find(self, user):
+        user = ORM.find(UserModel, user)
         data = super().dump(obj=user)
         return data
 
     def find_all(self):
-        users = UserModel.query.all()
+        users = ORM.find_all(UserModel)
         data = super().dump(users, many=True)
         return data
+
+    def create(self, user):
+        user_data = self.__parse(user)
+        ORM.create(user_data)
