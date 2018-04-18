@@ -9,10 +9,9 @@ flask-sqlalchemy = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
 flask-api = "*"
-ipython = "*"
-flask-shell-ipython = "*"
 
 [dev-packages]
+flask-shell-ipython = "*"
 
 [requires]
 python_version = "3.6"
