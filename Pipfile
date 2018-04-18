@@ -9,6 +9,8 @@ flask-sqlalchemy = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
 flask-api = "*"
+ipython = "*"
+flask-shell-ipython = "*"
 
 [dev-packages]
 

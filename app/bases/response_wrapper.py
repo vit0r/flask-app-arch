@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from functools import wraps
-from flask import request
+from flask import request, abort
 from flask_api import status
 
 
@@ -27,7 +27,7 @@ class ResponseWrapper(object):
 
     @classmethod
     def __no_content(cls):
-        return '', status.HTTP_204_NO_CONTENT
+        return abort(status.HTTP_204_NO_CONTENT)
 
     @classmethod
     def __created(cls):

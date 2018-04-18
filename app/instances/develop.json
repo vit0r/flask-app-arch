@@ -2,5 +2,9 @@
   "DEBUG": true,
   "SECRET_KEY": "xOxsxbXsj5Zm",
   "SQLALCHEMY_DATABASE_URI": "sqlite:///databases/develop.db",
-  "SQLALCHEMY_TRACK_MODIFICATIONS": true
+  "SQLALCHEMY_TRACK_MODIFICATIONS": true,
+  "BLUEPRINTS": {
+    "path": "blueprints",
+    "prefix": "/api"
+  }
 }
