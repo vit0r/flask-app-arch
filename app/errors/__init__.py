@@ -1,7 +1,3 @@
-"""
-cop-op marketing errors handler route
-"""
-
 from flask import Blueprint
 from flask_api import status
 

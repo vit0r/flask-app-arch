@@ -1,7 +1,3 @@
-"""
-cop-op marketing Blueprint
-"""
-
 from flask import Blueprint, request
 from app.modules.user_module import UserModule
 from app.libraries.response_wrapper import ResponseWrapper as rw
