@@ -1,4 +1,4 @@
-from app.bases import db
+from app.libraries import db
 
 
 class UserModel(db.Model):

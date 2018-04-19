@@ -4,7 +4,7 @@ cop-op marketing Blueprint
 
 from flask import Blueprint, request
 from app.modules.user_module import UserModule
-from app.bases.response_wrapper import ResponseWrapper as rw
+from app.libraries.response_wrapper import ResponseWrapper as rw
 
 bp = Blueprint(name=__file__, import_name=__name__)
 

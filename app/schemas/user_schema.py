@@ -1,10 +1,10 @@
+from flask_marshmallow.sqla import ModelSchema
 from marshmallow import post_load
-from app.bases import base_schema
-from app.bases.orm import ORM
+from app.libraries.orm import ORM
 from app.models.user_model import UserModel
 
 
-class UserSchema(base_schema.ModelSchema):
+class UserSchema(ModelSchema):
     class Meta:
         model = UserModel
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from app.bases import db
+from app.libraries import db
 
 
 class ORM(object):
