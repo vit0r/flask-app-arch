@@ -27,8 +27,8 @@ class ResponseWrapper(object):
 
     @classmethod
     def __no_content(cls):
-        return abort(status.HTTP_204_NO_CONTENT)
+        return '', status.HTTP_204_NO_CONTENT
 
     @classmethod
-    def __created(cls):
-        return '', status.HTTP_201_CREATED
+    def __created(cls, message='Registro gravado com sucesso.'):
+        return {'message': message}, status.HTTP_201_CREATED
